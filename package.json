@@ -1,0 +1,46 @@
+{
+  "name": "gravity-pose",
+  "version": "1.0.0",
+  "description": "Monocular 3D pose rectification & gravity alignment for floor-tilted smartphone cameras (MediaPipe / MoveNet / BlazePose).",
+  "keywords": [
+    "mediapipe",
+    "blazepose",
+    "pose-estimation",
+    "biomechanics",
+    "gravity-alignment",
+    "computer-vision",
+    "kinematics"
+  ],
+  "author": "David Dabert <https://github.com/david-dabert>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/david-dabert/gravity-pose.git"
+  },
+  "homepage": "https://github.com/david-dabert/gravity-pose#readme",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build && npm run test"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0"
+  }
+}
